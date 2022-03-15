@@ -18,12 +18,10 @@ const Pagination = () => {
         setCurrentPage(Number(e.target.id))
     }
 
-
-    const pages = []
+    let pages = []
     for (let i = 1; i <= Math.ceil(state?.length! / itemsPerPage); i++) {
         pages.push(i)
     }
-
 
     const renderPageNumber = pages?.map((number: any) => {
         if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
